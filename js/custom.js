@@ -17,6 +17,16 @@ let playertwo_button = document.querySelector(".playertwo_button");
 let playertwo_error = document.querySelector(".playertwo_error");
 let player_two = document.querySelector(".player_two");
 
+//player two name -- >> 
+let startinput_two = document.querySelector(".startinput_two");
+let startbutton_two = document.querySelector(".startbutton_two");
+let errors_two = document.querySelector(".errors_two");
+
+//player three name -- >> 
+let startinput_three = document.querySelector(".startinput_three");
+let startbutton_three = document.querySelector(".startbutton_three");
+let errors_three = document.querySelector(".errors_three");
+
 //player three -->>
 let playerThree_input = document.querySelector(".playerThree_input");
 let playerThree_button = document.querySelector(".playerThree_button");
@@ -33,7 +43,10 @@ let counts = 6;
 let nams = document.querySelector(".nams");
 let chances = document.querySelector(".chances");
 
-//player One in progress
+//game over
+
+
+//start in progress
 startbutton.addEventListener("click", function(){ 
     if(startinput.value == ""){
       //working for errors
@@ -65,8 +78,10 @@ playerone_button.addEventListener("click", function(){
 
       //player two
       player_two.style.display = "block";
-      playertwo_input.style.display = "block";
-      playertwo_button.style.display = "block";
+      startinput_two.style.display = "block";
+      startbutton_two.style.display = "block";
+      // playertwo_input.style.display = "block";
+      // playertwo_button.style.display = "block";
 
       //player one display removed
       playerone.style.display = "none";
@@ -79,6 +94,23 @@ playerone_button.addEventListener("click", function(){
       playerone_error.style.display = "block";
     }
   }  
+});
+
+// player one to two in progress
+startbutton_two.addEventListener("click", function(){
+  if(startinput_two.value == ""){
+    //working for errors
+    errors_two.style.display = "block";
+    errors_two.innerHTML = "Fill the line";
+  }else{
+    // player two name removed
+    startinput_two.style.display = "none";
+    startbutton_two.style.display = "none";
+    errors_two.style.display = "none";
+    // player two number added
+    playertwo_input.style.display = "block";
+    playertwo_button.style.display = "block";
+  }
 });
 
 // player two in progress
@@ -101,17 +133,18 @@ playertwo_button.addEventListener("click", function(){
     // for same number it will show winning
     if(playerone_input.value == playertwo_input.value){
         console.log("won")
-        // player_two.innerHTML = "player two winner",
-        //player tew removed
+        // game_over.innerHTML = "player two winner",
+        // game_over.style.display = "block",
+
+        //player tow removed
         player_two.style.display = "none",
         playertwo_input.style.display = "none",
         playertwo_button.style.display = "none",
 
         // player thrre added after succes of player two 
         player_Three.style.display = "block",
-        playerThree_input.style.display = "block",
-        playerThree_button.style.display = "block"
-
+        startinput_three.style.display = "block",
+        startbutton_three.style.display = "block"
     }else{
         console.log("failed");
         count--;
@@ -119,6 +152,7 @@ playertwo_button.addEventListener("click", function(){
         console.log(count);
         chance.style.display = "inline-block";
         nam.style.display = "block";    // chance 5 dile show korar somoi already 5 porjonto nia nei , chance 4 theke show koree
+        game_over.innerHTML = "player two failed"
           if(count == 0){
             console.log("game over");
             player_two.innerHTML = "lets move",
@@ -128,10 +162,29 @@ playertwo_button.addEventListener("click", function(){
             playertwo_button.style.display = "none",
             // player thrre added after succes of player two 
             player_Three.style.display = "block",
-            playerThree_input.style.display = "block",
-            playerThree_button.style.display = "block"
+            startinput_three.style.display = "block",
+            startbutton_three.style.display = "block"
           }
     }
+});
+
+// player two to three in progress
+startbutton_three.addEventListener("click", function(){
+  if(startinput_three.value == ""){
+    //working for errors
+    errors_three.style.display = "block";
+    errors_three.innerHTML = "Fill the line";
+  }else{
+    // player three name removed
+    startinput_three.style.display = "none";
+    startbutton_three.style.display = "none";
+    errors_three.style.display = "none";
+
+    // player three number added
+    player_Three.style.display = "block";
+    playerThree_input.style.display = "block";
+    playerThree_button.style.display = "block";
+  }
 });
 
 // player three in progress
@@ -150,22 +203,37 @@ playerThree_button.addEventListener("click", function(){
   }
   if(playerone_input.value == playerThree_input.value){
     console.log(`win`);
+    game_over.innerHTML = "player 3 win";
+    game_over.style.display = "block"
+    player_Three.style.display = "none";
+    playerThree_input.style.display = "none";
+    playerThree_button.style.display = "none";
+
   }else{
-    console.log(`faild`)
+    console.log(`failed`)
     counts--;
     chances.innerHTML = counts; 
     console.log(counts);
     chances.style.display = "inline-block";
     nams.style.display = "block";    // chance 5 dile show korar somoi already 5 porjonto nia nei , chance 4 theke show koree
+    game_over.style.display = "none"
       if(counts == 0){
         console.log("game over");
-
+        // game_over.innerHTML = "player 3 failed";
+        player_Three.style.display = "none";
+        playerThree_input.style.display = "none";
+        playerThree_button.style.display = "none";
       }
   }
+
+
+  if(playerone_input.value == playertwo_input.value){
+    game_over.innerHTML = "player two winner",
+    game_over.style.display = "block"
+  }else{
+    game_over.innerHTML = "player two failed",
+    game_over.style.display = "block"
+  }
+  
 });
-
-
-
-// 1. whats name 
-// 2. palyer winner 
-// 3. game over
+let game_over = document.querySelector(".game_over");
