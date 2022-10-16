@@ -252,7 +252,7 @@ playerThree_button.addEventListener("click", function(){
     chances.innerHTML = counts,
     chances.style.display = "inline-block",
     nams.style.display = "block"  
-    
+    nam.style.display = "none" 
       if(counts == 0){
         console.log("game over"),
         player_Three.style.display = "none",
@@ -278,7 +278,6 @@ playerThree_button.addEventListener("click", function(){
 
         // if player three & two both ar failed ,pl 1 are winner
         if(playerone_input.value != playertwo_input.value && playerone_input.value != playerThree_input.value){
-
           player__oneWinner.style.display = "block",
           player__TwoFailed.style.display = "none",
           player__ThreeFailed.style.display = "none",
