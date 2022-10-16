@@ -4,12 +4,29 @@
     box-sizing: border-box;
     outline: none;
 }
+img{
+    vertical-align: middle;
+}
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
+    overflow-y: hidden;
 }
 .box{
-    max-width: 500px;
-    margin: 0 auto;
+   background: url('../images/f9035aa4dc351ea86f717dc1b4372001.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 800px;
+   width: 100%;
+   position: relative;
+   z-index: 22;
+}
+.overlay{
+    position: absolute;
+    background: rgba(11, 11, 11, 0.044);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 .box__item{
     padding: 200px 0;
@@ -18,7 +35,7 @@ body{
     align-items: center;
 }
 .wanna, .player_one, .player_two, .player_Three{
-    color: #222;
+    color: #fff;
     font-size: 48px;
     font-weight: 600;
     text-transform: capitalize;
@@ -31,6 +48,7 @@ body{
     padding: 42px 400px 42px 52px;
     border-radius:79px ;
     border: 1px solid #D9D9D9;
+    font-family: 'Chakra Petch', sans-serif;
 }
 .playerone_input, .playertwo_input, .playerThree_input, .startinput_two, .startinput_three{
     display: none;
@@ -51,6 +69,7 @@ body{
     border-radius:79px ;
     border: 0;
     cursor: pointer;
+    font-family: 'Silkscreen', cursive;
 }
 .playerone_button, .playertwo_button, .playerThree_button, .startbutton_two, .startbutton_three{
     display: none;
@@ -63,12 +82,247 @@ body{
     margin: 30px 0;
     padding:10px 20px ;
     display: none;
+    text-transform: capitalize;
 }
-.nam, .nams, .game_over{
+.nam, .nams, .game_over, .player__Threewins, .player__ThreeFailed, .player__Twowins, .player__TwoFailed, .player__oneWinner{
     display: none;
+    color: #222;
 }
-.game_over{
+.nam, .nams{
+    color: #fff;
+}
+.game_over, .player__Threewins, .player__ThreeFailed, .player__Twowins, .player__TwoFailed, .player__oneWinner{
     color: #222;
     font-size: 48px;
     font-weight: 600;
+    text-transform: capitalize;
 }
+.game_over{
+    background: #D9D9D9;
+    border: 2px dotted rgba(255, 217, 0, 0.96);
+    padding: 20px;
+    margin: 40px;
+}
+.box__inner{
+    display: flex;
+    justify-content: center;
+}
+.player__Twowins, .player__Twowins , .player__TwoFailed , .player__Threewins , .player__ThreeFailed , .player__oneWinner{
+    background: #fff;
+    border: 2px dotted  rgba(255, 217, 0, 0.96);
+    padding: 100px 20px;
+    margin: 40px;
+}
+/* animation start here */
+.animi_text, .animi_text2, .animi_text2 , .animi_text3 , .animi_text4 , .animi_text5 , .animi_text6 , .animi_text7 , .animi_text8 , .animi_text9 {
+    position: absolute;
+    left: 20%;
+    top: 0;
+    font-size: 40px;
+    color: #7041D3;
+    animation: animi1 5s linear infinite;
+    -webkit-animation: animi1 5s linear infinite;
+}
+@keyframes animi1{
+    0%{
+        transform: translateY(0) rotate(30deg);
+        -webkit-transform: translateY(0) rotate(30deg);
+        -moz-transform: translateY(0) rotate(30deg);
+        -ms-transform: translateY(0) rotate(30deg);
+        -o-transform: translateY(0) rotate(30deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+}
+.animi_text2{
+    font-size: 30px;
+    color: brown;
+    left: 30%;
+    animation: animi2 6s linear infinite;
+    -webkit-animation: animi2 6s linear infinite;
+}
+@keyframes animi2{
+    0%{
+        transform: translateY(0) rotate(25deg);
+        -webkit-transform: translateY(0) rotate(25deg);
+        -moz-transform: translateY(0) rotate(25deg);
+        -ms-transform: translateY(0) rotate(25deg);
+        -o-transform: translateY(0) rotate(25deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+}
+.animi_text3, .animi_text5{
+    font-size: 50px;
+    color: #f4ad14;
+    left: 88%;
+    animation: animi3 7s linear infinite;
+    -webkit-animation: animi3 7s linear infinite;
+}
+@keyframes animi3{
+    0%{
+        transform: translateY(0) rotate(45deg);
+        -webkit-transform: translateY(0) rotate(45deg);
+        -moz-transform: translateY(0) rotate(45deg);
+        -ms-transform: translateY(0) rotate(45deg);
+        -o-transform: translateY(0) rotate(45deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+}
+.animi_text4{
+    font-size: 40px;
+    color: rgb(12, 172, 87);
+    left: 60%;
+    animation: animi4 4s linear infinite;
+    -webkit-animation: animi4 4s linear infinite;
+}
+@keyframes animi4{
+    0%{
+        transform: translateY(0) rotate(-50deg);
+        -webkit-transform: translateY(0) rotate(-50deg);
+        -moz-transform: translateY(0) rotate(-50deg);
+        -ms-transform: translateY(0) rotate(-50deg);
+        -o-transform: translateY(0) rotate(-50deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+}
+.animi_text7{
+    font-size: 40px;
+    color: rgba(208, 215, 18, 0.874);
+    left: 10%;
+    animation: animi4 6s linear infinite;
+    -webkit-animation: animi4 6s linear infinite;
+}
+.animi_text5{
+    color: #7041D3;
+    left: 80%;
+    font: 40px;
+}
+.animi_text6{
+    font-size: 20px;
+    left: 90%;
+    color: rgb(242, 15, 15);
+    animation: animi6 4s linear infinite;
+    -webkit-animation: animi6 4s linear infinite;
+}
+@keyframes animi6{
+    0%{
+        transform: translateY(0) rotate(80deg);
+        -webkit-transform: translateY(0) rotate(80deg);
+        -moz-transform: translateY(0) rotate(80deg);
+        -ms-transform: translateY(0) rotate(80deg);
+        -o-transform: translateY(0) rotate(80deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+
+}
+.animi_text8{
+    font-size: 20px;
+    left: 50%;
+    color: rgb(209, 15, 118);
+    animation: animi8 8s linear infinite;
+    -webkit-animation: animi8 8s linear infinite;
+}
+@keyframes animi8{
+    0%{
+        transform: translateY(0) rotate(40deg);
+        -webkit-transform: translateY(0) rotate(40deg);
+        -moz-transform: translateY(0) rotate(40deg);
+        -ms-transform: translateY(0) rotate(40deg);
+        -o-transform: translateY(0) rotate(40deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+
+}
+.animi_text9{
+    font-size: 60px;
+    left: 95%;
+    color: rgb(138, 197, 1);
+    animation: animi9 5s linear infinite;
+    -webkit-animation: animi9 5s linear infinite;
+}
+@keyframes animi9{
+    0%{
+        transform: translateY(0) rotate(90deg);
+        -webkit-transform: translateY(0) rotate(90deg);
+        -moz-transform: translateY(0) rotate(90deg);
+        -ms-transform: translateY(0) rotate(90deg);
+        -o-transform: translateY(0) rotate(90deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+
+}
+.animi_text9{
+    font-size: 40px;
+    left: 5%;
+    color: rgb(241, 169, 0);
+    animation: animi9 5s linear infinite;
+    -webkit-animation: animi9 5s linear infinite;
+}
+@keyframes animi9{
+    0%{
+        transform: translateY(0) rotate(-50deg);
+        -webkit-transform: translateY(0) rotate(-50deg);
+        -moz-transform: translateY(0) rotate(-50deg);
+        -ms-transform: translateY(0) rotate(-50deg);
+        -o-transform: translateY(0) rotate(-50deg);
+        top: 0;
+}
+    100%{
+        transform: translateY(800px);
+        -webkit-transform: translateY(800px);
+        -moz-transform: translateY(800px);
+        -ms-transform: translateY(800px);
+        -o-transform: translateY(800px);
+}
+
+}
+/* animation end here */
+

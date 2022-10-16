@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>number guessing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
     <div class="box">
+        <div class="overlay"></div>
         <div class="box__item">
             <!--start game part start-->
             <h1 class="wanna">wanna play game?</h1>
@@ -22,44 +23,66 @@
             <!--start game part start-->
 
             <!--player-one part start-->
-            <h1 class="player_one">player One</h1>
-            <input type="text" placeholder="enter a number" class="playerone_input">
+            <h1 class="player_one">player One <span class="input__nameValue"></span></h1>
+            <input type="password" placeholder="enter a number" class="playerone_input">
             <button class="playerone_button">lets play</button>
             <h2 class="playerone_error"></h2>
             <!--player-one part start-->
 
             <!--player-two part start-->
             <!-- player two name start -->
-            <h1 class="player_two">player Two</h1>
+            <h1 class="player_two">player Two <span class="input__nameValueTWO"></span></h1>
             <input type="text" placeholder="type your name" class="startinput_two">
             <button class="startbutton_two">start</button>
             <h2 class="errors_two"></h2>
             <!-- player two name end -->
-            <h1 class="player_two">player Two</h1>
+            <!-- <h1 class="player_two">player Two</h1> -->
             <h2 class="nam">chance <span class="chance">5</span></h2>
-            <input type="text" placeholder="enter a number" class="playertwo_input">
+            <input type="password" placeholder="enter a number" class="playertwo_input">
             <button class="playertwo_button">lets play</button>
             <h2 class="playertwo_error"></h2>
             <!--player-two part start-->
 
-              <!--player-three part start-->
-                 <!-- player three name start -->
-                <h1 class="player_Three">player Three</h1>
-                <input type="text" placeholder="type your name" class="startinput_three">
-                <button class="startbutton_three">start</button>
-                <h2 class="errors_three"></h2>
-                <!-- player three name end -->
-              
-              <h2 class="nams">chance <span class="chances">5</span></h2>
-              <input type="text" placeholder="enter a number" class="playerThree_input">
-              <button class="playerThree_button">lets play</button>
-              <h2 class="playerThree_error"></h2>
-              <!--player-othreepart start-->
-                <!-- game over -->
+            <!--player-three part start-->
+            <!-- player three name start -->
+            <h1 class="player_Three">player Three <span class="input__nameValueThree"></span></h1>
+            <input type="text" placeholder="type your name" class="startinput_three">
+            <button class="startbutton_three">start</button>
+            <h2 class="errors_three"></h2>
+            <!-- player three name end -->
 
-                <h3 class="game_over">game over</h3>
-               
+            <!-- <h1 class="player_Three">player Three</h1> -->
+            <h2 class="nams">chance <span class="chances">5</span></h2>
+            <input type="password" placeholder="enter a number" class="playerThree_input">
+            <button class="playerThree_button">lets play</button>
+            <h2 class="playerThree_error"></h2>
+            <!--player-othreepart start-->
+
+            <!--winner part start-->
+            <div class="box__inner">
+                <h3 class="player__Twowins">player two winner</h3>
+                <h3 class="player__TwoFailed">player two Failed</h3>
+                <h3 class="player__Threewins">player three winner</h3>
+                <h3 class="player__ThreeFailed">player three Failed</h3>
+                <h3 class="player__oneWinner">player One winner</h3>
+            </div>
+            <h3 class="game_over">game over</h3> 
+             <!--winner part start-->
         </div>
+        <!--animation start -->
+        <div class="anim1">
+            <h4 class="animi_text">4</h4>
+            <h4 class="animi_text2">6</h4>
+            <h4 class="animi_text3">5</h4>
+            <h4 class="animi_text4">2</h4>
+            <h4 class="animi_text5">1</h4>
+            <h4 class="animi_text6">3</h4>
+            <h4 class="animi_text7">10</h4>
+            <h4 class="animi_text8">7</h4>
+            <h4 class="animi_text9">8</h4>
+            <h4 class="animi_text10">8</h4>
+        </div>
+        <!--animation end -->
     </div>
     <script src="js/custom.js"></script>
 </body>
